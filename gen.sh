@@ -69,12 +69,21 @@ shell (){
   done
 }
 
+markdown (){
+  echo "# darksands"
+  for name in ${!DARKSANDS[@]} ; do
+    echo "- ![$name](https://placehold.co/15x15/${DARKSANDS[$name]}/${DARKSANDS[$name]}.png) \`$name\`"
+  done
+
+}
+
 if [ "$1" = "-w" ] ; then
   lua > darksands.lua
   rust > darksands.rs
   shell > darksands.sh
-  ohmyposh > darksands_ohmyposh.json
   css > darksands.css
+  markdown > darksands.md
+  ohmyposh > darksands_ohmyposh.json
   yambar > darksands_yambar.yml
   exit 0
 fi
