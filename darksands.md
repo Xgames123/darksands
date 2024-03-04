@@ -1,4 +1,3 @@
-# darksands
 - ![COLOR_WARN](https://placehold.co/15x15/e78a4e/e78a4e.png) `COLOR_WARN`
 - ![COLOR_TEXT](https://placehold.co/15x15/C2BAB2/C2BAB2.png) `COLOR_TEXT`
 - ![COLOR_LAYER4](https://placehold.co/15x15/3f3c3c/3f3c3c.png) `COLOR_LAYER4`

@@ -70,11 +70,15 @@ shell (){
 }
 
 markdown (){
-  echo "# darksands"
   for name in ${!DARKSANDS[@]} ; do
     echo "- ![$name](https://placehold.co/15x15/${DARKSANDS[$name]}/${DARKSANDS[$name]}.png) \`$name\`"
   done
+}
 
+readme (){
+  echo "# darksands pallet"
+  echo "darksands color pallet in a bunch of languages."
+  markdown
 }
 
 if [ "$1" = "-w" ] ; then
@@ -85,6 +89,7 @@ if [ "$1" = "-w" ] ; then
   markdown > darksands.md
   ohmyposh > darksands_ohmyposh.json
   yambar > darksands_yambar.yml
+  readme > README.md
   exit 0
 fi
 
@@ -95,6 +100,8 @@ if [ "$1" = "" ] ; then
   ohmyposh
   css
   yambar
+  markdown
+  readme
   exit 0
 fi
 
