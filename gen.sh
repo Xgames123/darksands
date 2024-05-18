@@ -26,7 +26,7 @@ declare -A DARKSANDS=(
 rust ()
 {
   for name in ${!DARKSANDS[@]} ; do
-    echo "const $name :u32 = 0x${DARKSANDS[$name]}00_u32"
+    echo "const $name :u32 = 0x${DARKSANDS[$name]}ff_u32"
   done
 }
 
@@ -81,6 +81,13 @@ readme (){
   markdown
 }
 
+sway (){
+  for name in ${!DARKSANDS[@]} ; do
+    echo "set \$$name #${DARKSANDS[$name]}"
+  done
+
+}
+
 if [ "$1" = "-w" ] ; then
   lua > darksands.lua
   rust > darksands.rs
@@ -90,6 +97,7 @@ if [ "$1" = "-w" ] ; then
   ohmyposh > darksands_ohmyposh.json
   yambar > darksands_yambar.yml
   readme > README.md
+  sway > sway
   exit 0
 fi
 
@@ -102,6 +110,7 @@ if [ "$1" = "" ] ; then
   yambar
   markdown
   readme
+  sway
   exit 0
 fi
 
