@@ -26,7 +26,7 @@ declare -A DARKSANDS=(
 rust ()
 {
   for name in ${!DARKSANDS[@]} ; do
-    echo "const $name :u32 = 0x${DARKSANDS[$name]}ff_u32"
+    echo "const $name :u32 = 0x${DARKSANDS[$name]}ff_u32;"
   done
 }
 
