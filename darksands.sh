@@ -1,5 +1,5 @@
 export COLOR_WARN="e78a4e"
-export COLOR_TEXT="C2BAB2"
+export COLOR_TEXT="c2bab2"
 export COLOR_LAYER4="3f3c3c"
 export COLOR_LAYER5="4a4747"
 export COLOR_LAYER0="191817"

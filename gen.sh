@@ -5,7 +5,7 @@
 
 declare -A DARKSANDS=(
   [COLOR_ACCENT]="ffd5a0"
-  [COLOR_TEXT]="C2BAB2"
+  [COLOR_TEXT]="c2bab2"
 
   [COLOR_OK]="89b482"
   [COLOR_PINK]="d3869b"
@@ -88,6 +88,12 @@ sway (){
 
 }
 
+toml (){
+  for name in ${!DARKSANDS[@]} ; do
+    echo "$name=\"#${DARKSANDS[$name]}\""
+  done
+}
+
 if [ "$1" = "-w" ] ; then
   lua > darksands.lua
   rust > darksands.rs
@@ -98,6 +104,7 @@ if [ "$1" = "-w" ] ; then
   yambar > darksands_yambar.yml
   readme > README.md
   sway > sway
+  toml > darksands.toml
   exit 0
 fi
 
@@ -111,6 +118,7 @@ if [ "$1" = "" ] ; then
   markdown
   readme
   sway
+  toml
   exit 0
 fi
 

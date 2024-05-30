@@ -1,5 +1,5 @@
 const COLOR_WARN :u32 = 0xe78a4eff_u32;
-const COLOR_TEXT :u32 = 0xC2BAB2ff_u32;
+const COLOR_TEXT :u32 = 0xc2bab2ff_u32;
 const COLOR_LAYER4 :u32 = 0x3f3c3cff_u32;
 const COLOR_LAYER5 :u32 = 0x4a4747ff_u32;
 const COLOR_LAYER0 :u32 = 0x191817ff_u32;
