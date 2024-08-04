@@ -94,6 +94,12 @@ toml (){
   done
 }
 
+hyprland (){
+  for name in ${!DARKSANDS[@]} ; do
+    echo "\$$name = rgb(${DARKSANDS[$name]})"
+  done
+}
+
 if [ "$1" = "-w" ] ; then
   lua > darksands.lua
   rust > darksands.rs
@@ -105,6 +111,7 @@ if [ "$1" = "-w" ] ; then
   readme > README.md
   sway > sway
   toml > darksands.toml
+  hyprland > darksands_hyprland.conf
   exit 0
 fi
 
@@ -119,6 +126,7 @@ if [ "$1" = "" ] ; then
   readme
   sway
   toml
+  hyprland
   exit 0
 fi
 
